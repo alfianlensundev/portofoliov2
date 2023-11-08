@@ -5,7 +5,7 @@ pipeline {
         APPS = 'portofolio'
         REGISTRY_LOCATION = 'registry.alfianlensun.tech/portofolio'
     }
-    stages{
+    stages {
         stage('Build with docker') {
             steps {
                 sh "sed -i 's/DOCKER_BUILD_NUMBER/${BUILD_NUMBER}/g' .env"
@@ -19,14 +19,26 @@ pipeline {
             }
         }
         stage('Deploy to Production') {
-            when {
-                expression { GIT_BRANCH == 'origin/main'}
-            }
-            steps {
-                sshagent (credentials: ['pk1']) {
-                    sh "ssh -o StrictHostKeyChecking=no ${USERNAME_KANDOUPASS}@${IP_PROD_NIKS} 'cd /home/vannila/portofolio && cp templatedocker.yaml docker-compose.yaml'"
-                    sh "ssh -o StrictHostKeyChecking=no ${USERNAME_KANDOUPASS}@${IP_PROD_NIKS} 'cd /home/vannila/portofolio && cp templatedocker.yaml docker-compose.yaml'"
-                    sh "ssh -o StrictHostKeyChecking=no ${USERNAME_KANDOUPASS}@${IP_PROD_NIKS} 'cd /home/vannila/portofolio && sed -i 's+DOCKERIMAGES+${REGISTRY_LOCATION}:${BUILD_NUMBER}+g' docker-compose.yaml && docker compose up --force-recreate --build -d && docker image prune -f'"
+            stages {
+                stage('Copy Docker Compose To Server'){
+                    when {
+                        expression { GIT_BRANCH == 'origin/main'}
+                    }
+                    steps {
+                        sshagent (credentials: ['pk1']) {
+                            sh "ls"
+                        }
+                    }
+                }
+                stage('Pull Docker Image'){
+                    when {
+                        expression { GIT_BRANCH == 'origin/main'}
+                    }
+                    steps {
+                        sshagent (credentials: ['pk1']) {
+                            sh "ssh -o StrictHostKeyChecking=no ${USER_PS1}@${IP_PS1} 'cd /home/vannila/portofolio && sed -i 's+DOCKERIMAGES+${REGISTRY_LOCATION}:${BUILD_NUMBER}+g' docker-compose.yaml && docker compose up --force-recreate --build -d && docker image prune -f'"
+                        }
+                    }
                 }
             }
         }

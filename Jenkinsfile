@@ -24,8 +24,8 @@ pipeline {
             }
             steps {
                 sshagent (credentials: ['pk1']) {
-                    sh "ssh -o StrictHostKeyChecking=no -p ${PORT_PS1} ${USER_PS1}@${IP_PS1} 'mkdir -P /home/vannila/jenkinsdeployment/${REGISTRY_LOCATION}'"
-                    sh "scp -P ${PORT_PS1} docker-compose.yml ${USER_PS1}@${IP_PS1} 'mkdir -P /home/vannila/jenkinsdeployment/${REGISTRY_LOCATION}'"
+                    sh "ssh -o StrictHostKeyChecking=no -p ${PORT_PS1} ${USER_PS1}@${IP_PS1} 'mkdir -p /home/vannila/jenkinsdeployment/${REGISTRY_LOCATION}'"
+                    sh "scp -P ${PORT_PS1} docker-compose.yml ${USER_PS1}@${IP_PS1}:/home/vannila/jenkinsdeployment/${REGISTRY_LOCATION}"
                 }
             }
         }

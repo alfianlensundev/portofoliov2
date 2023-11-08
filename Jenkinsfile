@@ -4,11 +4,12 @@ pipeline {
         REGISTRY = 'registry.alfianlensun.tech'
         APPS = 'portofolio'
         REGISTRY_LOCATION = 'registry.alfianlensun.tech/portofolio'
+        PWA = '1'
     }
     stages {
         stage('Build with docker') {
             steps {
-                sh "sed -i 's/PWA_ENABLE/1/g' .env"
+                sh "sed -i 's/PWA_ENABLE/${PWA}/g' .env"
                 sh "sed -i 's/DOCKER_BUILD_TIMESTAMP/${BUILD_TIMESTAMP}/g' .env"
                 sh "sed -i 's/DOCKER_BUILD_NUMBER/${BUILD_NUMBER}/g' .env"
                 sh "docker build -t ${REGISTRY}/${APPS}:${BUILD_NUMBER} -t ${REGISTRY}/${APPS}:latest ."

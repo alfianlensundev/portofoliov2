@@ -46,7 +46,7 @@ pipeline {
         	sh "docker rmi -f ${REGISTRY_LOCATION}:latest"
         }
         success {
-            echo 'I succeeded!'
+            echo 'I succeeded!!'
         }
         failure {
             echo 'I failed!'

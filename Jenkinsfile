@@ -10,9 +10,9 @@ pipeline {
         stage('Build with docker') {
             steps {
                 sh "sed -i 's/PWA_ENABLE/${PWA}/g' .env"
-                sh "sed -i 's/DOCKER_BUILD_TIMESTAMP/\$(echo date +%FT%T)/g' .env"
                 sh "sed -i 's/DOCKER_BUILD_NUMBER/${BUILD_NUMBER}/g' .env"
-                sh "cat .env"
+                sh "echo \\nDOCKER_BUILD_TIMESTAMP=$(date +%FT%T) >> .env"
+                sh "sed -i 's/DOCKER_BUILD_TIMESTAMP/\$(echo date +%FT%T)/g' .env"
                 sh "docker build -t ${REGISTRY}/${APPS}:${BUILD_NUMBER} -t ${REGISTRY}/${APPS}:latest ."
             }
         }

@@ -4,10 +4,11 @@ const withPWA = require('next-pwa')({
     dest: 'public',
     register: true,
     skipWaiting: true,
-})
+});
 
-module.exports = withPWA({
-    output: 'standalone'
-})
+const nextConfig = {
+    output: 'standalone',
+    // reactStrictMode: false,
+}
 
 module.exports = process.env.PWA == 1 ? withPWA(nextConfig) : nextConfig

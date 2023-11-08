@@ -1,4 +1,4 @@
-import NavBar from '@/components/layouts/navbar/navbar'
+import NavBar from '@/components/custom/layouts/navbar/navbar'
 import { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
@@ -7,8 +7,8 @@ import {AiOutlineGithub} from 'react-icons/ai'
 
 export default function Home() {
     return (
-        <main className="w-full min-h-screen relative text-white bg-neutral-900 ">
-            <div className="w-full h-screen absolute flex justify-start overflow-x-hidden">
+        <main className="w-full h-screen relative text-white bg-neutral-900 ">
+            <div className="w-full h-screen fixed top-0 flex justify-start overflow-x-hidden">
                 <div className="w-2/3 relative">
                     <Image
                         priority
@@ -26,10 +26,10 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="relative h-screen flex flex-col z-20">
-                <div className="w-full pt-12">
-                    <div className="container mx-auto flex items-center">
-                        <div className="h-20 w-40 relative -left-20">
+            <div className="fixed top-0 h-screen flex flex-col z-20">
+                <div className="w-full xl:pt-12 lg:pt-12 md:pt-10 sm:pt-10 pt-10">
+                    <div className="xl:container lg:container mx-auto flex flex-wrap items-center">
+                        {/* <div className="h-20 w-40 relative xl:-left-20 lg:-left-20 md:left-0 sm:left-0 left-0"> */}
                             {/* <Image
                                 priority
                                 className='object-contain'
@@ -38,20 +38,16 @@ export default function Home() {
                                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
                                 alt="bg"
                             /> */}
-                        </div>
-                        <div
-                            style={{
-                                flex: 1      
-                            }}
-                        >
+                        {/* </div> */}
+                        <div className='xl:flex-1 lg:flex-1 md:w-full sm:w-full w-full'>
                             <NavBar />
                         </div>
                     </div>
                 </div>
-                <div className="w-full h-full">
+                <div className="w-full flex-1 overflow-y-auto">
                     <div className="container mx-auto pt-20">
                         <div className="w-full flex justify-end">
-                            <div className="w-2/3">
+                            <div className="xl:w-2/3 lg:w-2/3 md:w-full sm:w-full w-full">
                                 <div className="w-full pt-[5%]">
                                     <div className="w-full">
                                         <div className="w-full font-bold text-orange-300 text-xl">
@@ -64,7 +60,7 @@ export default function Home() {
                                             As a Lead Programmer at RSUP Prof. Dr. R.D. Kandou Manado, I develop and maintain web and mobile applications for healthcare services, using HL7 standards and NextJS framework to deliver high-quality and user-friendly solutions for patients, doctors, and staff.
                                         </div>
                                     </div>
-                                    <div className="w-full mt-10 pl-[50px]">
+                                    <div className="w-full mt-10 xl:pl-[50px] lg:pl-[50px]">
                                         <div className="w-full font-bold text-orange-300 text-xl">
                                             HIS integration with SatuSehat Platform;
                                         </div>
@@ -75,7 +71,7 @@ export default function Home() {
                                             Integrating medical record data at RSUP Prof Dr. R. D. Kandou with the Satu Sehat platform.
                                         </div>
                                     </div>
-                                    <div className="w-full mt-10 pl-[100px]">
+                                    <div className="w-full mt-10 xl:pl-[100px] lg:pl-[100px]">
                                         <div className="w-full font-bold text-orange-300 text-xl">
                                             A Freelancer ;
                                         </div>

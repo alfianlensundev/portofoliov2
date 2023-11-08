@@ -1,4 +1,4 @@
-import NavBar from '@/components/layouts/navbar/navbar'
+import NavBar from '@/components/custom/layouts/navbar/navbar'
 import { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
@@ -27,9 +27,9 @@ export default function Skills() {
                 </div>
             </div>
             <div className="fixed top-0 w-full h-screen flex flex-col z-20">
-                <div className="w-full pt-12">
-                    <div className="container mx-auto flex items-center">
-                        <div className="h-20 w-40 relative -left-20">
+                <div className="w-full xl:pt-12 lg:pt-12 md:pt-10 sm:pt-10 pt-10">
+                    <div className="xl:container lg:container mx-auto flex flex-wrap items-center">
+                        {/* <div className="h-20 w-40 relative xl:-left-20 lg:-left-20 md:left-0 sm:left-0 left-0"> */}
                             {/* <Image
                                 priority
                                 className='object-contain'
@@ -38,12 +38,8 @@ export default function Skills() {
                                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
                                 alt="bg"
                             /> */}
-                        </div>
-                        <div
-                            style={{
-                                flex: 1      
-                            }}
-                        >
+                        {/* </div> */}
+                        <div className='xl:flex-1 lg:flex-1 md:w-full sm:w-full w-full'>
                             <NavBar />
                         </div>
                     </div>
@@ -64,7 +60,7 @@ export default function Skills() {
                                 </div>
                             </div>
                             <div className="w-full mt-10">
-                                <div className="w-full flex flex-wrap gap-x-20">
+                                <div className="w-full gap-y-10 flex flex-wrap gap-x-20">
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image
@@ -157,7 +153,7 @@ export default function Skills() {
                                 </div>
                             </div>
                             <div className="w-full mt-10">
-                                <div className="w-full flex flex-wrap gap-x-20">
+                                <div className="w-full flex gap-y-10 flex-wrap gap-x-20">
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image
@@ -235,7 +231,7 @@ export default function Skills() {
                                 </div>
                             </div>
                             <div className="w-full mt-10">
-                                <div className="w-full flex flex-wrap gap-x-20">
+                                <div className="w-full gap-y-10 flex flex-wrap gap-x-20">
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image
@@ -328,7 +324,7 @@ export default function Skills() {
                                 </div>
                             </div>
                             <div className="w-full mt-10 pb-4">
-                                <div className="w-full flex flex-wrap gap-x-20">
+                                <div className="w-full gap-y-10 flex flex-wrap gap-x-20">
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image

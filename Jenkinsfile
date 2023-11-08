@@ -49,7 +49,7 @@ pipeline {
             echo 'I succeeded!'
         }
         failure {
-            echo 'I failed'
+            echo 'I failed!'
         }
     }
 }

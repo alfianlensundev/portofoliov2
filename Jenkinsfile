@@ -18,27 +18,23 @@ pipeline {
                 sh "docker push ${REGISTRY}/${APPS}:latest"
             }
         }
-        stage('Deploy to Production') {
-            stages {
-                stage('Copy Docker Compose To Server'){
-                    when {
-                        expression { GIT_BRANCH == 'origin/main'}
-                    }
-                    steps {
-                        sshagent (credentials: ['pk1']) {
-                            sh "ls"
-                        }
-                    }
+        stage('Copy docker compose to server') {
+            when {
+                expression { GIT_BRANCH == 'origin/main'}
+            }
+            steps {
+                sshagent (credentials: ['pk1']) {
+                    sh "ssh -o StrictHostKeyChecking=no ${USER_PS1}@${IP_PS1} 'cd /home/vannila/portofolio && sed -i 's+DOCKERIMAGES+${REGISTRY_LOCATION}:${BUILD_NUMBER}+g' docker-compose.yaml && docker compose up --force-recreate --build -d && docker image prune -f'"
                 }
-                stage('Pull Docker Image'){
-                    when {
-                        expression { GIT_BRANCH == 'origin/main'}
-                    }
-                    steps {
-                        sshagent (credentials: ['pk1']) {
-                            sh "ssh -o StrictHostKeyChecking=no ${USER_PS1}@${IP_PS1} 'cd /home/vannila/portofolio && sed -i 's+DOCKERIMAGES+${REGISTRY_LOCATION}:${BUILD_NUMBER}+g' docker-compose.yaml && docker compose up --force-recreate --build -d && docker image prune -f'"
-                        }
-                    }
+            }
+        }
+        stage('Deploy to Production') {
+            when {
+                expression { GIT_BRANCH == 'origin/main'}
+            }
+            steps {
+                sshagent (credentials: ['pk1']) {
+                    sh "ssh -o StrictHostKeyChecking=no ${USER_PS1}@${IP_PS1} 'cd /home/vannila/portofolio && sed -i 's+DOCKERIMAGES+${REGISTRY_LOCATION}:${BUILD_NUMBER}+g' docker-compose.yaml && docker compose up --force-recreate --build -d && docker image prune -f'"
                 }
             }
         }

@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+  portofolio:
+    image: "DOCKERIMAGES"
+    container_name: portofolio
+    hostname: portofolio
+    restart: always
+    networks:
+      - "net"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+    ports:
+      - 8000:80
+networks:
+  net:
+    external: true

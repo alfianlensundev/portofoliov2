@@ -17,6 +17,15 @@ export const metadata: Metadata = {
         siteName: 'Portofolio - Alfian Lensun',
         images: '/images/og-image.png',
     },
+    manifest: "/manifest.json",
+    viewport: {
+        initialScale: 1,
+        maximumScale: 1,
+        minimumScale: 1,
+        width: 'device-width',
+        height: "device-height",
+        userScalable: false,
+    }
 }
 
 export default function RootLayout({

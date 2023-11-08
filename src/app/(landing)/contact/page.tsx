@@ -13,14 +13,14 @@ export default function Home() {
                     <Image
                         priority
                         className='object-cover object-right opacity-50'
-                        src="/images/bg.jpg"
+                        src="/images/contact.jpg"
                         fill
                         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
                         alt="bg"
                     />
-                    <div className="w-full h-full select-none absolute z-10 bg-neutral-900 bg-opacity-70">
+                    {/* <div className="w-full h-full select-none absolute z-10 bg-neutral-900 bg-opacity-70">
 
-                    </div>
+                    </div> */}
                     <div className="w-full h-full select-none absolute z-10 bg-gradient-to-r from-neutral-900 to-transparent">
 
                     </div>
@@ -55,7 +55,37 @@ export default function Home() {
                                 <div className="w-full pt-[20%]">
                                     <div className="w-full mt-4 text-sm">
                                         <div className="flex">
-
+                                            <div className="w-full">
+                                                <div className="w-full">
+                                                    <div className="w-full font-bold text-orange-300 text-3xl">
+                                                        Contact;
+                                                    </div>
+                                                    <div className="w-full mt-4 text-[13px] flex">
+                                                        <div className="w-[100px] ">
+                                                            E-Mail 
+                                                        </div>
+                                                        <div className="flex-1">
+                                                            <Link href={'mailto:alfianlensundev@gmail.com'}>
+                                                                <div className="w-fit hover:underline">
+                                                                    alfianlensundev@gmail.com
+                                                                </div>
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-full mt-2 text-[13px] flex">
+                                                        <div className="w-[100px] ">
+                                                            LinkedIn
+                                                        </div>
+                                                        <div className="flex-1">
+                                                            <Link href={'https://www.linkedin.com/in/alfian-ricky-lensun-260407174/'}>
+                                                                <div className="w-fit text-left hover:underline">
+                                                                    Alfian Ricky Lensun
+                                                                </div>
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

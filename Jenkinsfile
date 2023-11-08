@@ -42,8 +42,8 @@ pipeline {
     }
     post {
         always {
-            sh "docker rmi ${REGISTRY_LOCATION}:${BUILD_NUMBER}"
-        	sh "docker rmi ${REGISTRY_LOCATION}:latest"
+            sh "docker rmi -f ${REGISTRY_LOCATION}:${BUILD_NUMBER}"
+        	sh "docker rmi -f ${REGISTRY_LOCATION}:latest"
         }
         success {
             echo 'I succeeded!'

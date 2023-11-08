@@ -11,8 +11,7 @@ pipeline {
             steps {
                 sh "sed -i 's/PWA_ENABLE/${PWA}/g' .env"
                 sh "sed -i 's/DOCKER_BUILD_NUMBER/${BUILD_NUMBER}/g' .env"
-                def currentDateTime = sh(script: 'date "+%FT%T"', returnStdout: true).trim()
-                sh "\\nDOCKER_BUILD_TIMESTAMP=${currentDateTime} >> .env"
+                // sh "\\nDOCKER_BUILD_TIMESTAMP=${currentDateTime} >> .env"
                 sh "docker build -t ${REGISTRY}/${APPS}:${BUILD_NUMBER} -t ${REGISTRY}/${APPS}:latest ."
             }
         }

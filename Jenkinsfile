@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Build with docker') {
             steps {
+                sh 'printenv'
                 // sh "sed -i 's/PWA_ENABLE/${PWA}/g' .env"
                 sh "sed -i 's/DOCKER_BUILD_TIMESTAMP/${BUILD_TIMESTAMP}/g' .env"
                 sh "sed -i 's/DOCKER_BUILD_NUMBER/${BUILD_NUMBER}/g' .env"

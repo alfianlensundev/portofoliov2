@@ -5,6 +5,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {AiOutlineGithub} from 'react-icons/ai'
 
+const webDescription = 'This website is created as a playground for the new and developing tech stack. This app run with Bun 1.0'
+export const metadata: Metadata = {
+    metadataBase: new URL('https://acme.com'),
+    title: 'Alfian Lensun ',
+    description: webDescription,
+    openGraph: {
+        title: 'Alfian Lensun',
+        description: webDescription,
+        siteName: 'Welcome - Alfian Lensun',
+        images: '/images/bg.jpg',
+    },
+}
 export default function Home() {
     return (
         <main className="w-full group h-screen  overflow-hidden relative text-white bg-neutral-900 ">
@@ -60,6 +72,11 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className="absolute bottom-2 right-10 text-[10px]">
+                        <div className="container mx-auto">
+                            Pipeline - {process.env.BUILD_NUMBER} {process.env.BUILD_TIMESTAMP} 
                         </div>
                     </div>
                 </div>

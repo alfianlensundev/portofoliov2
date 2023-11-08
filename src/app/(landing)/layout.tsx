@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Alfian Lensun',
         description: webDescription,
-        siteName: 'Berufsausbildung International',
+        siteName: 'Portofolio - Alfian Lensun',
         images: '/images/og-image.png',
     },
 }

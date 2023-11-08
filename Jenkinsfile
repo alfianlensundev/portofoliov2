@@ -35,7 +35,7 @@ pipeline {
             }
             steps {
                 sshagent (credentials: ['pk1']) {
-                    sh "ssh -o StrictHostKeyChecking=no -p ${PORT_PS1} ${USER_PS1}@${IP_PS1} 'cd /home/vannila/jenkinsdeployment/${REGISTRY_LOCATION} && sed -i 's+DOCKERIMAGES+${REGISTRY_LOCATION}:${BUILD_NUMBER}+g' docker-compose.yml && docker compose up --force-recreate --build -d && docker image prune -f'"
+                    sh "ssh -o StrictHostKeyChecking=no -p ${PORT_PS1} ${USER_PS1}@${IP_PS1} 'cd /home/vannila/jenkinsdeployment/${REGISTRY_LOCATION} && sed -i 's+DOCKERIMAGES+${REGISTRY_LOCATION}:${BUILD_NUMBER}+g' docker-compose.yml && docker compose up --force-recreate --build -d && docker image prune -f' "
                 }
             }
         }

@@ -9,7 +9,7 @@ pipeline {
         stage('Build with docker') {
             steps {
                 sh "sed -i 's/DOCKER_BUILD_NUMBER/${BUILD_NUMBER}/g' .env"
-                sh "docker buildx build -t ${REGISTRY}/${APPS}:${BUILD_NUMBER} -t ${REGISTRY}/${APPS}:latest ."
+                sh "docker build -t ${REGISTRY}/${APPS}:${BUILD_NUMBER} -t ${REGISTRY}/${APPS}:latest ."
             }
         }
         stage('Publish to docker image') {

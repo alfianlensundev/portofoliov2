@@ -9,7 +9,7 @@ const popp = Poppins({
 })
 const webDescription = 'This website is created as a playground for the new and developing tech stack. This app run with Bun 1.0'
 export const metadata: Metadata = {
-    metadataBase: new URL('https://acme.com'),
+    metadataBase: new URL('https://alfianlensun.tech'),
     title: 'Alfian Lensun',
     description: webDescription,
     openGraph: {

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     manifest: "/manifest.json",
     viewport: {
         initialScale: 1,
-        maximumScale: 1,
+        maximumScale: 5,
         minimumScale: 1,
         width: 'device-width',
         height: "device-height"

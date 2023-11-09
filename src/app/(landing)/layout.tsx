@@ -25,8 +25,7 @@ export const metadata: Metadata = {
         maximumScale: 1,
         minimumScale: 1,
         width: 'device-width',
-        height: "device-height",
-        userScalable: false,
+        height: "device-height"
     }
 }
 

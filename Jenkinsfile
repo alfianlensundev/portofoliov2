@@ -11,7 +11,6 @@ pipeline {
             steps {
                 sh "sed -i 's/PWA_ENABLE/${PWA}/g' .env"
                 sh "sed -i 's/DOCKER_BUILD_NUMBER/${BUILD_NUMBER}/g' .env"
-                // sh "\\nDOCKER_BUILD_TIMESTAMP=${currentDateTime} >> .env"
                 sh "docker build -t ${REGISTRY}/${APPS}:${BUILD_NUMBER} -t ${REGISTRY}/${APPS}:latest ."
             }
         }

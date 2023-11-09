@@ -1,3 +1,4 @@
+import FirebaseProvider from '@/components/custom/providers/FirebaseProvider'
 import '../globals.css'
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
@@ -35,7 +36,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <body className={`${popp.className} antialiased`}>{children}</body>
+        <body className={`${popp.className} antialiased`}>
+            <FirebaseProvider/>
+            {children}
+        </body>
     </html>
   )
 }

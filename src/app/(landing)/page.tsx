@@ -65,7 +65,7 @@ export default function Home() {
                                         <h1>{`Hi, I'm Alfian Lensun </>`}</h1>
                                     </div>
                                     <div className="w-full mt-4 text-sm">
-                                        <p>A Software Developer From Manado</p>
+                                        <h2>A Software Developer From Manado</h2>
                                     </div>
                                     <div className="w-full mt-4 text-xs leading-loose">
                                         <p>{`I started my career in 2018. Since then i've made many`} <b>Android</b>, <b>IOS</b>. <b>Web</b>, and <b></b> Application. </p>

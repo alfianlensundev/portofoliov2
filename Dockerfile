@@ -1,4 +1,4 @@
-FROM oven/bun:1.0.9-alpine AS deps
+FROM node:20.9.0-alpine AS deps
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
@@ -14,7 +14,6 @@ COPY . .
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN ls
 RUN yarn build
 
 # Production image, copy all the files and run next

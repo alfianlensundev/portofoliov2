@@ -62,13 +62,13 @@ export default function Home() {
                             <div className="xl:w-1/2 lg:w-1/2 md:w-full sm:w-full w-full">
                                 <div className="w-full pt-[20%]">
                                     <div className="w-full font-bold text-orange-300 xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl text-2xl">
-                                        {`Hi, I'm Alfian Lensun </>`}
+                                        <h1>{`Hi, I'm Alfian Lensun </>`}</h1>
                                     </div>
                                     <div className="w-full mt-4 text-sm">
-                                        A Software Developer From Manado
+                                        <p>A Software Developer From Manado</p>
                                     </div>
                                     <div className="w-full mt-4 text-xs leading-loose">
-                                        {`I started my career in 2018. Since then i've made many`} <b>Android</b>, <b>IOS</b>. <b>Web</b>, and <b></b> Application. 
+                                        <p>{`I started my career in 2018. Since then i've made many`} <b>Android</b>, <b>IOS</b>. <b>Web</b>, and <b></b> Application. </p>
                                     </div>
                                 </div>
                             </div>

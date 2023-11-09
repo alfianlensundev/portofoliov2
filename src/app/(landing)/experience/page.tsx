@@ -51,7 +51,7 @@ export default function Home() {
                                 <div className="w-full pt-[5%]">
                                     <div className="w-full">
                                         <div className="w-full font-bold text-orange-300 text-xl">
-                                            Lead Programmer ;
+                                            <h2>Lead Programmer ;</h2>
                                         </div>
                                         <div className="w-full mt-2 text-[13px] leading-loose">
                                             RSUP Prof Dr R D Kandou Manado
@@ -62,7 +62,7 @@ export default function Home() {
                                     </div>
                                     <div className="w-full mt-10 xl:pl-[50px] lg:pl-[50px]">
                                         <div className="w-full font-bold text-orange-300 text-xl">
-                                            HIS integration with SatuSehat Platform;
+                                            <h2>HIS integration with SatuSehat Platform;</h2>
                                         </div>
                                         <div className="w-full mt-2 text-[13px] leading-loose">
                                             RSUP Prof Dr R D Kandou Manado - Digital Transformation Office (DTO) Kemenkes
@@ -73,7 +73,7 @@ export default function Home() {
                                     </div>
                                     <div className="w-full mt-10 xl:pl-[100px] lg:pl-[100px]">
                                         <div className="w-full font-bold text-orange-300 text-xl">
-                                            A Freelancer ;
+                                            <h2>A Freelancer ;</h2>
                                         </div>
                                         <div className="w-full mt-2 text-[13px] leading-loose">
                                             *************

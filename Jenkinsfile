@@ -26,7 +26,7 @@ pipeline {
                 sh "docker build -t ${REGISTRY}/${APPS}:${BUILD_NUMBER} -t ${REGISTRY}/${APPS}:latest ."
             }
         }
-        stage('Publish to docker image') {
+        stage('Publish to docker registry') {
             steps {
                 sh "docker push ${REGISTRY}/${APPS}:${BUILD_NUMBER}"
                 sh "docker push ${REGISTRY}/${APPS}:latest"

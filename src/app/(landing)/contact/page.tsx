@@ -16,7 +16,6 @@ export default function Home() {
             <div className="w-full h-screen absolute flex justify-end overflow-x-hidden">
                 <div className="xl:block lg:block sm:hidden md:hidden hidden xl:w-2/3 lg:w-2/3 md:w-full w-full sm:w-full -right-32 relative">
                     <Image
-                        priority
                         className='object-cover object-right opacity-50'
                         src="/images/contact.jpg"
                         fill

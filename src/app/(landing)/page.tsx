@@ -8,7 +8,13 @@ import {AiOutlineGithub} from 'react-icons/ai'
 const webDescription = 'This website is created as a playground for the new and developing tech stack. This app run with Bun 1.0'
 export const metadata: Metadata = {
     title: 'Alfian Lensun ',
-    description: webDescription
+    description: webDescription,
+    openGraph: {
+        title: 'Alfian Lensun',
+        description: webDescription,
+        siteName: 'Portofolio - Alfian Lensun',
+        images: '/images/bg.jpg',
+    },
 }
 export default function Home() {
     return (
@@ -16,12 +22,11 @@ export default function Home() {
             <div className="w-full h-screen top-0 absolute flex justify-end overflow-x-hidden">
                 <div className="w-2/3 overflow-hidden xl:-right-32 lg:-right-32 md:right-0 sm:right-0 right-0 relative">
                     <Image
-                        priority
                         className='object-cover xl:group-hover:scale-110 lg:group-hover:scale-110 md:group-hover:scale-100 sm:group-hover:scale-100 group-hover:scale-100 transition-all duration-1000 xl:object-right lg:object-right md:object-left sm:object-left object-left opacity-50'
                         src="/images/bg.jpg"
                         fill
                         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
-                        alt="bg"
+                        alt="Alfian Lensun"
                     />  
                     <div className="w-full h-full select-none absolute z-10 bg-gradient-to-r from-neutral-900 to-transparent">
 

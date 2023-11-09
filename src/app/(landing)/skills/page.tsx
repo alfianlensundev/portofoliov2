@@ -16,7 +16,6 @@ export default function Skills() {
             <div className="w-full h-screen fixed flex justify-start overflow-x-hidden">
                 <div className="w-full relative">
                     <Image
-                        priority
                         className='object-cover object-left opacity-50'
                         src="/images/experience3.png"
                         fill

@@ -7,7 +7,7 @@ pipeline {
         PWA = '1'
     }
     stages {
-        stage('Build with docker') {
+        stage('Setup Environment') {
             steps {
                 sh "sed -i 's/PWA_ENABLE/${PWA}/g' .env"
                 sh "sed -i 's/DOCKER_BUILD_NUMBER/${BUILD_NUMBER}/g' .env"
@@ -19,6 +19,10 @@ pipeline {
                 echo "\\nNEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=${NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID} >> .env"
                 echo "\\nNEXT_PUBLIC_FIREBASE_APP_ID=${NEXT_PUBLIC_FIREBASE_APP_ID} >> .env"
                 echo "\\nNEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=${NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID} >> .env"
+            }
+        }
+        stage('Build with docker') {
+            steps {
                 sh "docker build -t ${REGISTRY}/${APPS}:${BUILD_NUMBER} -t ${REGISTRY}/${APPS}:latest ."
             }
         }

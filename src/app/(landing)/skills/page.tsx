@@ -5,6 +5,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {AiOutlineGithub} from 'react-icons/ai'
 
+const webDescription = 'This website is created as a playground for the new and developing tech stack. This app run with Bun 1.0'
+export const metadata: Metadata = {
+    title: 'Alfian Lensun - Skills',
+    description: webDescription,
+}
 export default function Skills() {
     return (
         <main className="w-full min-h-screen relative text-white bg-neutral-900 ">

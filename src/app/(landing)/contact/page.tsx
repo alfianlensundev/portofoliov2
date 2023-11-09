@@ -7,15 +7,8 @@ import {AiOutlineGithub} from 'react-icons/ai'
 
 const webDescription = 'This website is created as a playground for the new and developing tech stack. This app run with Bun 1.0'
 export const metadata: Metadata = {
-    metadataBase: new URL('https://acme.com'),
     title: 'Alfian Lensun - Contact',
     description: webDescription,
-    openGraph: {
-        title: 'Alfian Lensun',
-        description: webDescription,
-        siteName: 'Contact - Alfian Lensun',
-        images: '/images/contact.jpg',
-    },
 }
 export default function Home() {
     return (

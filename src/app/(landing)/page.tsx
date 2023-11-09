@@ -76,7 +76,7 @@ export default function Home() {
                     </div>
                     <div className="absolute bottom-2 right-10 text-[10px]">
                         <div className="container mx-auto">
-                            Pipeline - {process.env.BUILD_NUMBER} {process.env.BUILD_TIMESTAMP} 
+                            Pipeline - {process.env.BUILD_NUMBER}
                         </div>
                     </div>
                 </div>

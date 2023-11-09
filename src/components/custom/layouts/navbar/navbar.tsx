@@ -24,7 +24,7 @@ export default function NavBar(){
                     Contact
                 </div>
             </Link>
-            <Link href={'https://github.com/alfianlensundev'}>
+            <Link aria-label="My Github" href={'https://github.com/alfianlensundev'}>
                 <div className="xl:w-fit pb-1 lg:w-fit md:w-1/5 sm:w-1/5 w-1/5 px-4 uppercase text-xs font-medium hover:text-orange-300 transition-colors duration-200">
                     <AiOutlineGithub size={20}/>
                 </div>

@@ -3,7 +3,7 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json ./
-RUN bun install
+RUN yarn install
 
 # Rebuild the source code only when needed
 FROM node:20.9.0-alpine AS builder

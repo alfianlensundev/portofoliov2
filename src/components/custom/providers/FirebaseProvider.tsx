@@ -6,7 +6,6 @@ import { useEffect } from "react"
 
 export default function FirebaseProvider(){
     useEffect(() => {
-        alert()
         getAnalytics(app);
     }, [])
     return null

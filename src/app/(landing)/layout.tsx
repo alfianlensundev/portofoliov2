@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         siteName: 'Portofolio - Alfian Lensun',
         images: '/images/og-image.png',
     },
-    keywords: ['portofolio', 'programmer', 'software', 'engineer','profil', 'skills', 'alfian', 'lensun'],
+    keywords: ['software', 'developer', 'manado', 'freelancer'],
     manifest: "/manifest.json",
     viewport: {
         initialScale: 1,

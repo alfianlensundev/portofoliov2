@@ -11,8 +11,7 @@ pipeline {
             steps {
                 sh "sed -i 's/PWA_ENABLE/${PWA}/g' .env"
                 sh "sed -i 's/DOCKER_BUILD_NUMBER/${BUILD_NUMBER}/g' .env"
-                // sh "\\nDOCKER_BUILD_TIMESTAMP=${currentDateTime} >> .env"
-                sh "echo \\n\\nNEXT_PUBLIC_FIREBASE_API_KEY=${NEXT_PUBLIC_FIREBASE_API_KEY} >> .env"
+                sh "echo \\\nNEXT_PUBLIC_FIREBASE_API_KEY=${NEXT_PUBLIC_FIREBASE_API_KEY} >> .env"
                 sh "echo \\nNEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN} >> .env"
                 sh "echo \\nNEXT_PUBLIC_FIREBASE_PROJECT_ID=${'NEXT_PUBLIC_FIREBASE_PROJECT_ID'} >> .env"
                 sh "echo \\nNEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=${NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET} >> .env"

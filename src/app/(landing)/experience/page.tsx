@@ -7,9 +7,9 @@ import {AiOutlineGithub} from 'react-icons/ai'
 
 export default function Home() {
     return (
-        <main className="w-full h-screen relative text-white bg-neutral-900 ">
-            <div className="w-full h-screen fixed top-0 flex justify-start overflow-x-hidden">
-                <div className="w-2/3 relative">
+        <main className="w-full min-h-screen relative text-white bg-neutral-900 ">
+            <div className="w-full h-screen absolute flex justify-end overflow-x-hidden">
+                <div className="xl:block lg:block sm:hidden md:hidden hidden xl:w-2/3 lg:w-2/3 md:w-full w-full sm:w-full -right-32 relative">
                     <Image
                         priority
                         className='object-cover object-left opacity-50'
@@ -26,7 +26,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="fixed top-0 h-screen flex flex-col z-20">
+            <div className="w-full fixed top-0 left-0 h-screen flex flex-col z-20">
                 <div className="w-full xl:pt-12 lg:pt-12 md:pt-10 sm:pt-10 pt-10">
                     <div className="xl:container lg:container mx-auto flex flex-wrap items-center">
                         {/* <div className="h-20 w-40 relative xl:-left-20 lg:-left-20 md:left-0 sm:left-0 left-0"> */}

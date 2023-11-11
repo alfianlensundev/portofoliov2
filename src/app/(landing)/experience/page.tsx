@@ -14,7 +14,7 @@ export default function Home() {
     return (
         <main className="w-full min-h-screen relative text-white bg-black ">
             <div className="w-full h-screen absolute flex justify-end overflow-x-hidden">
-                <div className="xl:block lg:block sm:hidden md:hidden hidden xl:w-2/3 lg:w-2/3 md:w-full w-full sm:w-full -right-32 relative">
+                <div className="xl:block lg:block sm:hidden md:hidden hidden xl:w-full lg:w-full md:w-full w-full sm:w-full -right-32 relative">
                     <Image
                         className='object-cover object-left opacity-50'
                         src="/images/experience2.png"

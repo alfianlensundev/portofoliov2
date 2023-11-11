@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 }
 export default function Skills() {
     return (
-        <main className="w-full min-h-screen relative text-white bg-neutral-900 ">
+        <main className="w-full min-h-screen relative text-white bg-black ">
             <div className="w-full h-screen fixed flex justify-start overflow-x-hidden">
                 <div className="w-full relative">
                     <Image
@@ -22,7 +22,7 @@ export default function Skills() {
                         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
                         alt="bg"
                     />
-                    <div className="w-full h-full select-none fixed top-0 z-10 bg-neutral-900 bg-opacity-95">
+                    <div className="w-full h-full select-none fixed top-0 z-10 bg-black bg-opacity-80">
 
                     </div>
                     {/* <div className="w-full h-full select-none absolute z-10 bg-gradient-to-r from-transparent to-neutral-900">
@@ -68,7 +68,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/ts.png"
                                                 fill
@@ -83,7 +82,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/js.png"
                                                 fill
@@ -98,7 +96,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/go.png"
                                                 fill
@@ -113,7 +110,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/php.png"
                                                 fill
@@ -128,7 +124,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 bg-white rounded-xl relative">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/rust.png"
                                                 fill
@@ -161,7 +156,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/mongodb.png"
                                                 fill
@@ -176,7 +170,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative bg-white rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/mariadb.png"
                                                 fill
@@ -191,7 +184,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/elastic.png"
                                                 fill
@@ -206,7 +198,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/redis.png"
                                                 fill
@@ -239,7 +230,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/nextjs.png"
                                                 fill
@@ -254,7 +244,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/nest.png"
                                                 fill
@@ -269,7 +258,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/fastify.png"
                                                 fill
@@ -284,7 +272,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/tailwind.png"
                                                 fill
@@ -299,7 +286,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/prisma.png"
                                                 fill
@@ -309,6 +295,20 @@ export default function Skills() {
                                         </div>
                                         <div className="text-center text-xs mt-4">
                                             Prisma
+                                        </div>
+                                    </div>
+                                    <div className="w-fit">
+                                        <div className="h-20 w-20 relative rounded-xl">
+                                            <Image
+                                                className='object-contain'
+                                                src="/images/tech/trpc.svg"
+                                                fill
+                                                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
+                                                alt="bg"
+                                            />
+                                        </div>
+                                        <div className="text-center text-xs mt-4">
+                                            tRPC
                                         </div>
                                     </div>
                                 </div>
@@ -332,7 +332,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/docker.png"
                                                 fill
@@ -347,7 +346,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/nginx.png"
                                                 fill
@@ -362,7 +360,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/jenkins.png"
                                                 fill
@@ -377,7 +374,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/git.png"
                                                 fill
@@ -392,7 +388,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/gitlab.png"
                                                 fill
@@ -407,7 +402,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/sentry.png"
                                                 fill
@@ -422,7 +416,6 @@ export default function Skills() {
                                     <div className="w-fit">
                                         <div className="h-20 w-20 relative rounded-xl">
                                             <Image
-                                                priority
                                                 className='object-contain'
                                                 src="/images/tech/kibana.png"
                                                 fill

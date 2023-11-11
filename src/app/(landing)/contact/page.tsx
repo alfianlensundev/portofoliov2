@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 }
 export default function Home() {
     return (
-        <main className="w-full min-h-screen relative text-white bg-neutral-900 ">
+        <main className="w-full min-h-screen relative text-white bg-black ">
             <div className="w-full h-screen absolute flex justify-end overflow-x-hidden">
                 <div className="xl:block lg:block sm:hidden md:hidden hidden xl:w-2/3 lg:w-2/3 md:w-full w-full sm:w-full -right-32 relative">
                     <Image
@@ -22,10 +22,10 @@ export default function Home() {
                         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
                         alt="bg"
                     />
-                    <div className="w-full h-full select-none absolute z-10 bg-neutral-900 bg-opacity-70">
+                    <div className="w-full h-full select-none absolute z-10 bg-black bg-opacity-70">
 
                     </div>
-                    <div className="w-full h-full select-none absolute z-10 bg-gradient-to-r from-neutral-900 to-transparent">
+                    <div className="w-full h-full select-none absolute z-10 bg-gradient-to-r from-black to-transparent">
 
                     </div>
                 </div>

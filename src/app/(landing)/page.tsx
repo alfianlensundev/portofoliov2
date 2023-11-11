@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 }
 export default function Home() {
     return (
-        <main className="w-full group h-screen  overflow-hidden relative text-white bg-neutral-900 ">
+        <main className="w-full group h-screen  overflow-hidden relative text-white bg-black ">
             <div className="w-full h-screen top-0 absolute flex justify-end overflow-x-hidden">
                 <div className="w-2/3 overflow-hidden xl:-right-32 lg:-right-32 md:right-0 sm:right-0 right-0 relative">
                     <Image
@@ -28,11 +28,11 @@ export default function Home() {
                         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
                         alt="Alfian Lensun"
                     />  
-                    <div className="w-full h-full select-none absolute z-10 bg-gradient-to-r from-neutral-900 to-transparent">
+                    <div className="w-full h-full select-none absolute z-10 bg-gradient-to-r from-black to-transparent">
 
                     </div>
                 </div>
-                <div className="w-full h-full select-none absolute z-10 bg-neutral-900 bg-opacity-70">
+                <div className="w-full h-full select-none absolute z-10 bg-black bg-opacity-70">
 
                 </div>
             </div>

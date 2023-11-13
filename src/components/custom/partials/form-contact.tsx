@@ -14,7 +14,10 @@ export default function FormContact(){
     const comments = trpc.getComments.useQuery()
     const { register, handleSubmit, watch,reset, formState: { errors } } = useForm<FormContactData>();
     const mutation = trpc.createComments.useMutation({
-        onSuccess: () => comments.refetch()
+        onSuccess: () => {
+            comments.refetch()
+            reset()
+        }
     })
     const onSubmit = (data:  FormContactData) => {
         mutation.mutate({

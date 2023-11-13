@@ -19,6 +19,7 @@ pipeline {
                 sh "echo \\\nNEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=${NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID} >> .env"
                 sh "echo \\\nNEXT_PUBLIC_FIREBASE_APP_ID=${NEXT_PUBLIC_FIREBASE_APP_ID} >> .env"
                 sh "echo \\\nNEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=${NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID} >> .env"
+                sh "echo \\\nDATABASE_URL=${DATABASE_URL} >> .env"
                 sh "cat .env"
             }
         }

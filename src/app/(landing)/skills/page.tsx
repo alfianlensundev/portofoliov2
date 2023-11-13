@@ -171,6 +171,20 @@ export default function Skills() {
                                         <div className="h-20 w-20 relative bg-white rounded-xl">
                                             <Image
                                                 className='object-contain'
+                                                src="/images/tech/postgres.png"
+                                                fill
+                                                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
+                                                alt="bg"
+                                            />
+                                        </div>
+                                        <div className="text-center text-xs mt-4">
+                                            PostgreSQL
+                                        </div>
+                                    </div>
+                                    <div className="w-fit">
+                                        <div className="h-20 w-20 relative bg-white rounded-xl">
+                                            <Image
+                                                className='object-contain'
                                                 src="/images/tech/mariadb.png"
                                                 fill
                                                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'

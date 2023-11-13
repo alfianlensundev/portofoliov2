@@ -26,7 +26,7 @@ export default function Home() {
 
                     </div>
                     <div className="w-full h-full select-none absolute z-10 bg-gradient-to-r from-transparent to-black">
-
+                        
                     </div>
                 </div>
             </div>

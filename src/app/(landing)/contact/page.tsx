@@ -1,16 +1,21 @@
+import { serverClient } from '@/app/_trpc/server-client'
 import NavBar from '@/components/custom/layouts/navbar/navbar'
+import FormContact from '@/components/custom/partials/form-contact'
+import TRPCProvider from '@/components/custom/providers/trpc-provider'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 import { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
-import {AiOutlineGithub} from 'react-icons/ai'
+import {MdChevronRight} from 'react-icons/md'
 
 const webDescription = 'This website is created as a playground for the new and developing tech stack. This app run with Bun 1.0'
 export const metadata: Metadata = {
     title: 'Alfian Lensun - Contact',
     description: webDescription,
 }
-export default function Home() {
+export default async function Contact() {
     return (
         <main className="w-full min-h-screen relative text-white bg-black ">
             <div className="w-full h-screen absolute flex justify-end overflow-x-hidden">
@@ -60,7 +65,7 @@ export default function Home() {
                                                     <div className="w-full font-bold text-orange-300 text-3xl">
                                                         Contact;
                                                     </div>
-                                                    <div className="w-full mt-4 text-[13px] flex">
+                                                    <div className="w-fit mt-4 text-[13px] flex">
                                                         <div className="w-[100px] ">
                                                             E-Mail 
                                                         </div>
@@ -72,7 +77,7 @@ export default function Home() {
                                                             </Link>
                                                         </div>
                                                     </div>
-                                                    <div className="w-full mt-2 text-[13px] flex">
+                                                    <div className="w-fit mt-2 text-[13px] flex">
                                                         <div className="w-[100px] ">
                                                             LinkedIn
                                                         </div>
@@ -84,6 +89,11 @@ export default function Home() {
                                                             </Link>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div className="w-2/4">
+                                                    <TRPCProvider>
+                                                        <FormContact /> 
+                                                    </TRPCProvider>
                                                 </div>
                                             </div>
                                         </div>

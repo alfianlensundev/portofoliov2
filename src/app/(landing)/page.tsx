@@ -1,3 +1,4 @@
+import Terminal from '@/components/custom/features/terminal'
 import NavBar from '@/components/custom/layouts/navbar/navbar'
 import { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
@@ -74,7 +75,7 @@ export default function Home() {
                     </div>
                     <div className="absolute bottom-2 right-0 text-[10px]">
                         <div className="container mx-auto pr-10">
-                            Pipeline - {process.env.BUILD_NUMBER}
+                            Version - 1.0.{process.env.BUILD_NUMBER}
                         </div>
                     </div>
                 </div>

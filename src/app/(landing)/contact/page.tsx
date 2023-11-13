@@ -90,7 +90,7 @@ export default async function Contact() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="w-2/4">
+                                                <div className="xl:w-2/4 lg:w-2/4 md:w-full sm:w-full w-full">
                                                     <TRPCProvider>
                                                         <FormContact /> 
                                                     </TRPCProvider>

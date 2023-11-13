@@ -14,8 +14,8 @@ COPY . .
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN yarn build
 RUN npx prisma generate
+RUN yarn build
 
 # Production image, copy all the files and run next
 FROM node:20.9.0-alpine AS runner

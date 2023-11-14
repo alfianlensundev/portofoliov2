@@ -35,7 +35,7 @@ export default async function Contact() {
                     </div>
                 </div>
             </div>
-            <div className="relative h-screen flex flex-col z-20">
+            <div className="relative h-screen overflow-auto flex flex-col z-20">
                 <div className="w-full xl:pt-12 lg:pt-12 md:pt-10 sm:pt-10 pt-10">
                     <div className="xl:container lg:container mx-auto flex flex-wrap items-center">
                         {/* <div className="h-20 w-40 relative xl:-left-20 lg:-left-20 md:left-0 sm:left-0 left-0"> */}

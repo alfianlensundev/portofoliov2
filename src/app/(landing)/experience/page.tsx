@@ -55,7 +55,10 @@ export default function Home() {
                                 <div className="w-full pt-[5%]">
                                     <div className="w-full">
                                         <div className="w-full font-bold text-orange-300 text-xl">
-                                            <h2>Lead Programmer ;</h2>
+                                            <h1>Lead Programmer ;</h1>
+                                        </div>
+                                        <div className="w-full font-medium text-red-200 mt-2 text-[11px]">
+                                            <h2>May 2022 - Present</h2>
                                         </div>
                                         <div className="w-full mt-2 text-[13px] leading-loose">
                                             RSUP Prof Dr R D Kandou Manado
@@ -68,6 +71,9 @@ export default function Home() {
                                         <div className="w-full font-bold text-orange-300 text-xl">
                                             <h2>HIS integration with SatuSehat Platform;</h2>
                                         </div>
+                                        <div className="w-full font-medium text-red-200 mt-2 text-[11px]">
+                                            <h2>2023</h2>
+                                        </div>
                                         <div className="w-full mt-2 text-[13px] leading-loose">
                                             RSUP Prof Dr R D Kandou Manado - Digital Transformation Office (DTO) Kemenkes
                                         </div>
@@ -77,10 +83,10 @@ export default function Home() {
                                     </div>
                                     <div className="w-full mt-10 xl:pl-[100px] lg:pl-[100px]">
                                         <div className="w-full font-bold text-orange-300 text-xl">
-                                            <h2>A Freelancer ;</h2>
+                                            <h2>A Freelancer;</h2>
                                         </div>
-                                        <div className="w-full mt-2 text-[13px] leading-loose">
-                                            *************
+                                        <div className="w-full font-medium text-red-200 mt-2 text-[11px]">
+                                            <h2>Present</h2>
                                         </div>
                                         <div className="w-full mt-2 text-[13px] text-neutral-400 leading-loose">
                                             Creating and developing web and mobile applications according to the requested needs.
